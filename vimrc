@@ -118,14 +118,14 @@ map <leader>gc :YcmCompleter GoToDeclaration<CR>
 " Compile tool functions
 func! CompileRunGcc()
     exec "w"
-    exec "!gcc % -o %<"
+    exec "!gcc -std=c99 % -o %<"
     exec "! ./%<"
 endfunc
-nmap <F5> :call CompileRunGpp()<CR>
+nmap <F5> :call CompileRunGcc()<CR>
 
 func! CompileRunGpp()
     exec "w"
-    exec "!g++ % -o %<"
+    exec "!g++ -std=c++11 % -o %<"
     exec "! ./%<"
 endfunc
 nmap <F6> :call CompileRunGpp()<CR>
