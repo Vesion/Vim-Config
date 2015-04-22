@@ -134,3 +134,4 @@ func! CompileRunPython()
     exec "w"
     exec "!python %"
 endfunc
+nmap <F7> :call CompileRunPython()<CR>
