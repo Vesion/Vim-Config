@@ -80,7 +80,12 @@ set nohlsearch
 
 colorscheme molokai 
 
+" switch between windows
 map <Tab><Tab> <C-W>W:cd %:p:h<CR>:<CR>
+
+" save/load session
+map <leader>s :mksession ~/.vimsession<CR>
+map <leader>l :source ~/.vimsession<CR>
 
 " NERDTree Config
 map <F1> :NERDTreeToggle<CR>
