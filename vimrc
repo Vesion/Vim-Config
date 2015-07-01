@@ -78,6 +78,12 @@ set ignorecase
 set incsearch
 set nohlsearch
 
+" forbid direction keys
+nnoremap <up> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+nnoremap <down> <nop>
+
 colorscheme molokai 
 
 " switch between windows
