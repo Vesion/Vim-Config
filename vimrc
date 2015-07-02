@@ -9,19 +9,30 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'L9'
 
+" color theme
 Plugin 'tomasr/molokai'
+" statusline utility 
 Plugin 'Lokaltog/vim-powerline'
+" show a small vertical line when tap indent
 Plugin 'Yggdroot/indentLine'
 
+" directory and file tree
 Plugin 'scrooloose/nerdtree'
+" comment utility
 Plugin 'scrooloose/nerdcommenter'
+" augment the parentheses matching with colors
 Plugin 'kien/rainbow_parentheses.vim'
+" ctag based utility
 Plugin 'majutsushi/tagbar'
+" syntastic check
 Plugin 'scrooloose/syntastic'
 
+" easily add, delete and change surroundings like () [] or tags
 Plugin 'tpope/vim-surround'
+" automatic closing of surroundings
 Plugin 'Raimondi/delimitMate'
 
+" great but complicated utility for auto-completion
 Plugin 'Valloric/YouCompleteMe'
 
 
@@ -108,9 +119,16 @@ map <c-p> :RainbowParenthesesToggleAll<CR>
 " PowerLine Config
 let g:Powerline_symbols = 'fancy'
 
-" nerdcommenter Config
+" nerdcommenter mappings 
 " <leader>cc comment on
 " <leader>cu uncomment
+
+" vim-surround mappings, take [ok] for instance
+" cs['      change [] to ''              'ok'
+" cs'<i>    change '' to <i></i>         <i>ok</i>
+" cst[      change <i></i> to []         [ok]
+" ds[       delete []                    ok
+" yss]      add []                       [ok]
 
 " Syntastic Config
 set statusline+=%#warningmsg#
