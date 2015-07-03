@@ -2,12 +2,12 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'L9'
 
 " color theme
 Plugin 'tomasr/molokai'
@@ -15,23 +15,29 @@ Plugin 'tomasr/molokai'
 Plugin 'Lokaltog/vim-powerline'
 " show a small vertical line when tap indent
 Plugin 'Yggdroot/indentLine'
-
 " directory and file tree
 Plugin 'scrooloose/nerdtree'
+" ctag based utility
+Plugin 'majutsushi/tagbar'
+
+" vim script library, provide commands and functions
+Plugin 'L9'
+" easy motion
+Plugin 'easymotion/vim-easymotion'
+" a git wrapper
+Plugin 'tpope/vim-fugitive'
+
 " comment utility
 Plugin 'scrooloose/nerdcommenter'
 " augment the parentheses matching with colors
 Plugin 'kien/rainbow_parentheses.vim'
-" ctag based utility
-Plugin 'majutsushi/tagbar'
-" syntastic check
-Plugin 'scrooloose/syntastic'
-
 " easily add, delete and change surroundings like () [] or tags
 Plugin 'tpope/vim-surround'
 " automatic closing of surroundings
 Plugin 'Raimondi/delimitMate'
 
+" syntastic check
+Plugin 'scrooloose/syntastic'
 " great but complicated utility for auto-completion
 Plugin 'Valloric/YouCompleteMe'
 
