@@ -22,8 +22,6 @@ Plugin 'majutsushi/tagbar'
 
 " vim script library, provide commands and functions
 Plugin 'L9'
-" easy motion
-" Plugin 'easymotion/vim-easymotion'
 " a git wrapper
 Plugin 'tpope/vim-fugitive'
 
@@ -33,8 +31,12 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/rainbow_parentheses.vim'
 " easily add, delete and change surroundings like () [] or tags
 Plugin 'tpope/vim-surround'
+" augment '.' repeat
+Plugin 'tpope/vim-repeat'
 " automatic closing of surroundings
 Plugin 'Raimondi/delimitMate'
+" a replacement for grep
+Plugin 'mileszs/ack.vim'
 
 " syntastic check
 Plugin 'scrooloose/syntastic'
