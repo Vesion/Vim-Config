@@ -37,6 +37,9 @@ Plugin 'tpope/vim-repeat'
 Plugin 'Raimondi/delimitMate'
 " a replacement for grep
 Plugin 'mileszs/ack.vim'
+" define own text object
+Plugin 'kana/vim-textobj-user'
+Plugin 'kana/vim-textobj-function'
 
 " syntastic check
 Plugin 'scrooloose/syntastic'
