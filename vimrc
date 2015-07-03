@@ -23,7 +23,7 @@ Plugin 'majutsushi/tagbar'
 " vim script library, provide commands and functions
 Plugin 'L9'
 " easy motion
-Plugin 'easymotion/vim-easymotion'
+" Plugin 'easymotion/vim-easymotion'
 " a git wrapper
 Plugin 'tpope/vim-fugitive'
 
@@ -110,7 +110,7 @@ map <Tab><Tab> <C-W>W:cd %:p:h<CR>:<CR>
 map <esc><esc> :q<CR>
 
 " save/load session
-map <leader>s :mksession ~/.vimsession!<CR>
+map <leader>s :mksession! ~/.vimsession<CR>
 map <leader>l :source ~/.vimsession<CR>
 
 " NERDTree Config
