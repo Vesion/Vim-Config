@@ -12,7 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 " color theme
 Plugin 'tomasr/molokai'
 " statusline utility 
-Plugin 'Lokaltog/vim-powerline'
+Plugin 'bling/vim-airline'
 " show a small vertical line when tap indent
 Plugin 'Yggdroot/indentLine'
 " directory and file tree
@@ -127,8 +127,12 @@ nmap <F8> :TagbarToggle<CR>
 " rainbow_parentheses Config
 map <c-p> :RainbowParenthesesToggleAll<CR>
 
-" PowerLine Config
-let g:Powerline_symbols = 'fancy'
+" airline Config
+let g:airline_powerline_fonts = 1
+" codes below is for macvim airline
+if has("gui_running")
+    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
+endif
 
 " nerdcommenter mappings 
 " <leader>cc comment on
