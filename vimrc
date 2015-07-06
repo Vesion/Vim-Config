@@ -113,6 +113,8 @@ map <Tab><Tab> <C-W>W:cd %:p:h<CR>:<CR>
 
 " close window
 map <esc><esc> :q<CR>
+map <c-esc> :wq<CR>
+map <leader><esc><esc> :q!<CR>
 
 " save/load session
 map <leader>s :mksession! ~/.vimsession<CR>
