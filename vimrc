@@ -109,25 +109,25 @@ nnoremap <down> <nop>
 colorscheme molokai 
 
 " switch between windows
-map <Tab><Tab> <C-W>W:cd %:p:h<CR>:<CR>
+nnoremap <Tab><Tab> <C-W>W:cd %:p:h<CR>:<CR>
 
 " close window
-map <esc><esc> :q<CR>
-map <c-esc> :wq<CR>
-map <leader><esc><esc> :q!<CR>
+nnoremap <esc><esc> :q<CR>
+nnoremap <c-esc> :wq<CR>
+nnoremap <leader><esc><esc> :q!<CR>
 
 " save/load session
-map <leader>s :mksession! ~/.vimsession<CR>
-map <leader>l :source ~/.vimsession<CR>
+nnoremap <leader>s :mksession! ~/.vimsession<CR>
+nnoremap <leader>l :source ~/.vimsession<CR>
 
 " NERDTree Config
-map <F1> :NERDTreeToggle<CR>
+nnoremap <F1> :NERDTreeToggle<CR>
 
 " TagBar Config
-nmap <F8> :TagbarToggle<CR>
+nnoremap <F8> :TagbarToggle<CR>
 
 " rainbow_parentheses Config
-map <c-p> :RainbowParenthesesToggleAll<CR>
+nnoremap <c-p> :RainbowParenthesesToggleAll<CR>
 
 " airline Config
 let g:airline_powerline_fonts = 1
@@ -160,8 +160,8 @@ let g:syntastic_cpp_compiler_options     = ' -std=c++11 -stdlib=libc++'
 
 " YCM Config                    
 let g:ycm_confirm_extra_conf = 0
-map <leader>gd :YcmCompleter GoToDefinition<CR>
-map <leader>gc :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gc :YcmCompleter GoToDeclaration<CR>
 
 
 " Compile tool functions
@@ -170,17 +170,17 @@ func! CompileRunGcc()
     exec "!gcc -std=c99 % -o %<"
     exec "! ./%<"
 endfunc
-nmap <F5> :call CompileRunGcc()<CR>
+nnoremap <F5> :call CompileRunGcc()<CR>
 
 func! CompileRunGpp()
     exec "w"
     exec "!g++ -std=c++11 % -o %<"
     exec "! ./%<"
 endfunc
-nmap <F6> :call CompileRunGpp()<CR>
+nnoremap <F6> :call CompileRunGpp()<CR>
 
 func! CompileRunPython()
     exec "w"
     exec "!python %"
 endfunc
-nmap <F7> :call CompileRunPython()<CR>
+nnoremap <F7> :call CompileRunPython()<CR>
