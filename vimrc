@@ -52,14 +52,16 @@ filetype plugin indent on    " required
 
 
 " Other settings
+
+colorscheme molokai 
+
 syntax on
 
 let mapleader=","
 
 set encoding=utf-8
 
-set nu
-
+set number
 set cursorline
 set cursorcolumn
 
@@ -100,8 +102,9 @@ set ignorecase
 set incsearch
 set nohlsearch
 
-" edit vimrc handily
+" edit and save vimrc handily
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " forbid direction keys
 nnoremap <up> <nop>
@@ -109,7 +112,10 @@ nnoremap <left> <nop>
 nnoremap <right> <nop>
 nnoremap <down> <nop>
 
-colorscheme molokai 
+inoremap <up> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+inoremap <down> <nop>
 
 " switch between windows
 nnoremap <tab><tab> <c-w>W:cd %:p:h<cr>:<cr>
