@@ -100,6 +100,9 @@ set ignorecase
 set incsearch
 set nohlsearch
 
+" edit vimrc handily
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
 " forbid direction keys
 nnoremap <up> <nop>
 nnoremap <left> <nop>
@@ -109,25 +112,25 @@ nnoremap <down> <nop>
 colorscheme molokai 
 
 " switch between windows
-nnoremap <Tab><Tab> <C-W>W:cd %:p:h<CR>:<CR>
+nnoremap <tab><tab> <c-w>W:cd %:p:h<cr>:<cr>
 
 " close window
-nnoremap <esc><esc> :q<CR>
-nnoremap <c-esc> :wq<CR>
-nnoremap <leader><esc><esc> :q!<CR>
+nnoremap <esc><esc> :q<cr>
+nnoremap <c-esc> :wq<cr>
+nnoremap <leader><esc><esc> :q!<cr>
 
 " save/load session
-nnoremap <leader>s :mksession! ~/.vimsession<CR>
-nnoremap <leader>l :source ~/.vimsession<CR>
+nnoremap <leader>s :mksession! ~/.vimsession<cr>
+nnoremap <leader>l :source ~/.vimsession<cr>
 
 " NERDTree Config
-nnoremap <F1> :NERDTreeToggle<CR>
+nnoremap <f1> :NERDTreeToggle<cr>
 
 " TagBar Config
-nnoremap <F8> :TagbarToggle<CR>
+nnoremap <f8> :TagbarToggle<cr>
 
 " rainbow_parentheses Config
-nnoremap <c-p> :RainbowParenthesesToggleAll<CR>
+nnoremap <c-p> :RainbowParenthesesToggleAll<cr>
 
 " airline Config
 let g:airline_powerline_fonts = 1
@@ -160,8 +163,8 @@ let g:syntastic_cpp_compiler_options     = ' -std=c++11 -stdlib=libc++'
 
 " YCM Config                    
 let g:ycm_confirm_extra_conf = 0
-nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>gc :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gd :YcmCompleter GoToDefinition<cr>
+nnoremap <leader>gc :YcmCompleter GoToDeclaration<cr>
 
 
 " Compile tool functions
@@ -170,17 +173,17 @@ func! CompileRunGcc()
     exec "!gcc -std=c99 % -o %<"
     exec "! ./%<"
 endfunc
-nnoremap <F5> :call CompileRunGcc()<CR>
+nnoremap <f5> :call CompileRunGcc()<cr>
 
 func! CompileRunGpp()
     exec "w"
     exec "!g++ -std=c++11 % -o %<"
     exec "! ./%<"
 endfunc
-nnoremap <F6> :call CompileRunGpp()<CR>
+nnoremap <f6> :call CompileRunGpp()<cr>
 
 func! CompileRunPython()
     exec "w"
     exec "!python %"
 endfunc
-nnoremap <F7> :call CompileRunPython()<CR>
+nnoremap <f7> :call CompileRunPython()<cr>
