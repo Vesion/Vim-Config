@@ -202,24 +202,24 @@ nnoremap <leader>gc :YcmCompleter GoToDeclaration<cr>
 
 " Compile tool functions start ---------- {{{
 
-func! CompileRunGcc()
-    exec "w"
-    exec "!gcc -std=c99 % -o %<"
-    exec "! ./%<"
-endfunc
+function! CompileRunGcc()
+    execute "w"
+    execute "!gcc -std=c99 % -o %<"
+    execute "! ./%<"
+endfunction
 nnoremap <f5> :call CompileRunGcc()<cr>
 
-func! CompileRunGpp()
-    exec "w"
-    exec "!g++ -std=c++11 % -o %<"
-    exec "! ./%<"
-endfunc
+function! CompileRunGpp()
+    execute "w"
+    execute "!g++ -std=c++11 % -o %<"
+    execute "! ./%<"
+endfunction
 nnoremap <f6> :call CompileRunGpp()<cr>
 
-func! CompileRunPython()
-    exec "w"
-    exec "!python %"
-endfunc
+function! CompileRunPython()
+    execute "w"
+    execute "!python %"
+endfunction
 nnoremap <f7> :call CompileRunPython()<cr>
 
 " Compile tool functions end }}}
