@@ -1,6 +1,8 @@
-" Vundle Config
-set nocompatible              " be iMproved, required
-filetype off                  " required
+
+" Vundle and plugins load start ---------- {{{
+
+set nocompatible
+filetype off
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -47,13 +49,27 @@ Plugin 'scrooloose/syntastic'
 Plugin 'Valloric/YouCompleteMe'
 
 
-call vundle#end()            " required
-filetype plugin indent on    " required
+call vundle#end()
+filetype plugin indent on
 
+" Vundle and plugins load end }}}
 
-" Other settings
+" Non-plugin stuff start ---------- {{{
+
+" Vimscript autocommand settings ---------------------- {{{
+
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+
+" }}}
+
+" Vim common config ---------- {{{
 
 colorscheme molokai 
+set guioptions-=r
+set guioptions-=L
 
 syntax on
 
@@ -102,6 +118,10 @@ set ignorecase
 set incsearch
 set nohlsearch
 
+" }}}
+
+" Vim maps ---------- {{{
+
 " edit and save vimrc handily
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
@@ -128,6 +148,12 @@ nnoremap <leader><esc><esc> :q!<cr>
 " save/load session
 nnoremap <leader>s :mksession! ~/.vimsession<cr>
 nnoremap <leader>l :source ~/.vimsession<cr>
+
+"}}}
+
+" Non-plugin stuff end }}}
+
+" Plugin stuff start ---------- {{{
 
 " NERDTree Config
 nnoremap <f1> :NERDTreeToggle<cr>
@@ -172,8 +198,10 @@ let g:ycm_confirm_extra_conf = 0
 nnoremap <leader>gd :YcmCompleter GoToDefinition<cr>
 nnoremap <leader>gc :YcmCompleter GoToDeclaration<cr>
 
+" Plugin stuff end }}}
 
-" Compile tool functions
+" Compile tool functions start ---------- {{{
+
 func! CompileRunGcc()
     exec "w"
     exec "!gcc -std=c99 % -o %<"
@@ -193,3 +221,5 @@ func! CompileRunPython()
     exec "!python %"
 endfunc
 nnoremap <f7> :call CompileRunPython()<cr>
+
+" Compile tool functions end }}}
