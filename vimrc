@@ -128,6 +128,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " get back to normal mode when in insert mode swiftly
 inoremap jk <esc>
+inoremap <esc> <nop>
 
 " forbid direction keys
 nnoremap <up> <nop>
