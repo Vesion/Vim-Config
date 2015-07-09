@@ -126,6 +126,9 @@ set nohlsearch
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+" get back to normal mode when in insert mode swiftly
+inoremap jk <esc>
+
 " forbid direction keys
 nnoremap <up> <nop>
 nnoremap <left> <nop>
