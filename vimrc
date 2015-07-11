@@ -115,6 +115,7 @@ set selectmode=mouse,key
 set showmatch
 set matchtime=5
 set ignorecase
+set smartcase
 set incsearch
 set nohlsearch
 
