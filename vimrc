@@ -99,7 +99,6 @@ set smartindent
 set cindent
 
 set backspace=2
-set whichwrap+=<,>,h,l
 
 set nobackup
 set nowritebackup
