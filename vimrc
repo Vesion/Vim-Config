@@ -129,9 +129,12 @@ set nohlsearch
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-" get back to normal mode when in insert mode swiftly
+" get back to normal mode swiftly
 inoremap jk <esc>
 inoremap <esc> <nop>
+
+vnoremap jk <esc>
+vnoremap <esc> <nop>
 
 " forbid direction keys
 nnoremap <up> <nop>
@@ -153,11 +156,28 @@ nnoremap <c-esc> :wq<cr>
 nnoremap <leader><esc><esc> :q!<cr>
 
 " save/load session
-nnoremap <leader>s :mksession! ~/.vimsession<cr>
-nnoremap <leader>l :source ~/.vimsession<cr>
+nnoremap <leader>ss :mksession! ~/.vimsession<cr>
+nnoremap <leader>ls :source ~/.vimsession<cr>
 
 " put the cursor on the column of a mark
 nnoremap ' `
+
+" quick Ack! with tex object
+nnoremap <leader>k :set operatorfunc=AckOperator<cr>g@
+vnoremap <leader>k :<c-u>call AckOperator(visualmode())<cr>
+
+function! AckOperator(type)
+    let saved_unnamed_register = @@
+    if a:type ==# 'v'
+        normal! `<v`>y
+    elseif a:type ==# 'char'
+        normal! `[v`]ly
+    else
+        return
+    endif
+    silent execute "Ack! " . shellescape(@@) . ' ' . expand('%:p:h')
+    let @@ = saved_unnamed_register
+endfunction
 
 "}}}
 
