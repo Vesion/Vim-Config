@@ -11,6 +11,9 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
+" local test plugins
+" Plugin 'file:///Users/Xiang/Workspace/Vim/xx'
+
 " color theme
 Plugin 'tomasr/molokai'
 " statusline utility 
@@ -152,6 +155,9 @@ nnoremap <leader><esc><esc> :q!<cr>
 " save/load session
 nnoremap <leader>s :mksession! ~/.vimsession<cr>
 nnoremap <leader>l :source ~/.vimsession<cr>
+
+" put the cursor on the column of a mark
+map ' `
 
 "}}}
 
