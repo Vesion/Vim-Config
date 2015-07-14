@@ -11,9 +11,6 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-" local test plugins
-" Plugin 'file:///Users/Xiang/Workspace/Vim/xx'
-
 " color theme
 Plugin 'tomasr/molokai'
 " statusline utility 
@@ -46,11 +43,16 @@ Plugin 'mileszs/ack.vim'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-function'
 Plugin 'kana/vim-textobj-line'
+Plugin 'Vesion/vim-textobj-restline'
 
 " syntastic check
 Plugin 'scrooloose/syntastic'
 " great but complicated utility for auto-completion
 Plugin 'Valloric/YouCompleteMe'
+
+" local test plugins
+"Plugin 'file:///Users/Xiang/Workspace/Vim/xx'
+"Plugin 'file:///Users/Xiang/Workspace/Vim/vim-textobj-restline'
 
 
 call vundle#end()
