@@ -157,7 +157,7 @@ nnoremap <leader>s :mksession! ~/.vimsession<cr>
 nnoremap <leader>l :source ~/.vimsession<cr>
 
 " put the cursor on the column of a mark
-map ' `
+nnoremap ' `
 
 "}}}
 
