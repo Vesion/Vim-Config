@@ -45,6 +45,7 @@ Plugin 'mileszs/ack.vim'
 " define own text object
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-function'
+Plugin 'kana/vim-textobj-line'
 
 " syntastic check
 Plugin 'scrooloose/syntastic'
@@ -186,7 +187,7 @@ endfunction
 " Plugin stuff start ---------- {{{
 
 " NERDTree Config
-nnoremap <f1> :NERDTreeToggle<cr>
+nnoremap <f1> :execute ":NERDTreeToggle " . expand('%:p:h')<cr>
 
 " TagBar Config
 nnoremap <f8> :TagbarToggle<cr>
