@@ -44,6 +44,7 @@ Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-function'
 Plugin 'kana/vim-textobj-line'
 Plugin 'Vesion/vim-textobj-restline'
+Plugin 'Vesion/vim-textobj-surrounding'
 
 " syntastic check
 Plugin 'scrooloose/syntastic'
