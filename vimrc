@@ -53,6 +53,7 @@ Plugin 'Valloric/YouCompleteMe'
 " local test plugins
 "Plugin 'file:///Users/Xiang/Workspace/Vim/xx'
 "Plugin 'file:///Users/Xiang/Workspace/Vim/vim-textobj-restline'
+"Plugin 'file:///Users/Xiang/Workspace/Vim/vim-textobj-surrounding'
 
 
 call vundle#end()
