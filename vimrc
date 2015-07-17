@@ -21,16 +21,16 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdtree'
 " ctag based utility
 Plugin 'majutsushi/tagbar'
+" augment the parentheses matching with colors
+Plugin 'kien/rainbow_parentheses.vim'
 
 " vim script library, provide commands and functions
 Plugin 'L9'
+
 " a git wrapper
 Plugin 'tpope/vim-fugitive'
-
 " comment utility
 Plugin 'scrooloose/nerdcommenter'
-" augment the parentheses matching with colors
-Plugin 'kien/rainbow_parentheses.vim'
 " easily add, delete and change surroundings like () [] or tags
 Plugin 'tpope/vim-surround'
 " augment '.' repeat
@@ -39,12 +39,18 @@ Plugin 'tpope/vim-repeat'
 Plugin 'Raimondi/delimitMate'
 " a replacement for grep
 Plugin 'mileszs/ack.vim'
+
 " define own text object
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-function'
 Plugin 'kana/vim-textobj-line'
 Plugin 'Vesion/vim-textobj-restline'
 Plugin 'Vesion/vim-textobj-surrounding'
+
+" a tool for drawing some patterns 
+Plugin 'DrawIt'
+"a tool for drawing ascii art text
+Plugin 'Figlet.vim'
 
 " syntastic check
 Plugin 'scrooloose/syntastic'
