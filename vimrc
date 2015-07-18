@@ -144,9 +144,6 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 inoremap jk <esc>
 inoremap <esc> <nop>
 
-vnoremap jk <esc>
-vnoremap <esc> <nop>
-
 " forbid direction keys
 nnoremap <up> <nop>
 nnoremap <left> <nop>
