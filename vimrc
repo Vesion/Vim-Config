@@ -44,6 +44,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-function'
 Plugin 'kana/vim-textobj-line'
+Plugin 'kana/vim-textobj-entire'
 Plugin 'Vesion/vim-textobj-restline'
 Plugin 'Vesion/vim-textobj-surrounding'
 
@@ -149,11 +150,18 @@ nnoremap <up> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
 nnoremap <down> <nop>
-
 inoremap <up> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap <down> <nop>
+
+" move lines up and down
+nnoremap <c-j> :m .+1<cr>==
+nnoremap <c-k> :m .-2<cr>==
+inoremap <c-j> <esc>:m .+1<cr>==gi
+inoremap <c-k> <esc>:m .-2<cr>==gi
+vnoremap <c-j> :m '>+1<cr>gv=gv
+vnoremap <c-k> :m '<-2<cr>gv=gv
 
 " switch between windows
 nnoremap <tab><tab> <c-w>W:cd %:p:h<cr>:<cr>
