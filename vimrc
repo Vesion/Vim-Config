@@ -39,6 +39,8 @@ Plugin 'tpope/vim-repeat'
 Plugin 'Raimondi/delimitMate'
 " a replacement for grep
 Plugin 'mileszs/ack.vim'
+" true Sublime Text style multiple selections for Vim 
+Plugin 'terryma/vim-multiple-cursors'
 
 " define own text object
 Plugin 'kana/vim-textobj-user'
@@ -121,8 +123,9 @@ set noerrorbells
 set novisualbell
 
 set mouse=a 
-set selection=exclusive 
 set selectmode=mouse,key
+" for multiple-cursors plugin available in macvim
+set selection=inclusive 
 
 set showmatch
 set matchtime=5
