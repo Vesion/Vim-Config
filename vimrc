@@ -100,8 +100,6 @@ set showcmd
 set showmode
 set wildmenu
 
-set nowrap
-
 set laststatus=2
 
 set shiftwidth=4
