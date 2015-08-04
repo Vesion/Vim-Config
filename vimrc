@@ -45,6 +45,8 @@ Plugin 'terryma/vim-multiple-cursors'
 " define own text object
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-function'
+Plugin 'bps/vim-textobj-python'
+Plugin 'sgur/vim-textobj-parameter'
 Plugin 'kana/vim-textobj-line'
 Plugin 'kana/vim-textobj-entire'
 Plugin 'Vesion/vim-textobj-restline'
