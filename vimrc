@@ -54,8 +54,6 @@ Plugin 'kana/vim-textobj-entire'
 Plugin 'Vesion/vim-textobj-restline'
 Plugin 'Vesion/vim-textobj-surrounding'
 
-" a tool for drawing some patterns 
-Plugin 'DrawIt'
 "a tool for drawing ascii art text
 Plugin 'Figlet.vim'
 
