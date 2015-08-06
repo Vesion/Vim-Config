@@ -13,7 +13,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " color theme
 Plugin 'tomasr/molokai'
-" statusline utility 
+" enhance statusline
 Plugin 'bling/vim-airline'
 " show a small vertical line when tap indent
 Plugin 'Yggdroot/indentLine'
@@ -21,7 +21,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdtree'
 " ctag based utility
 Plugin 'majutsushi/tagbar'
-" augment the parentheses matching with colors
+" enhance the parentheses matching with colors
 Plugin 'kien/rainbow_parentheses.vim'
 
 " vim script library, provide commands and functions
@@ -33,7 +33,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdcommenter'
 " easily add, delete and change surroundings like () [] or tags
 Plugin 'tpope/vim-surround'
-" augment '.' repeat
+" enhance '.' repeat
 Plugin 'tpope/vim-repeat'
 " automatic closing of surroundings
 Plugin 'Raimondi/delimitMate'
@@ -220,8 +220,8 @@ endif
 " yss]      add []                       [ok]
 
 " quick Ack! with tex object
-nnoremap <leader>k :set operatorfunc=AckOperator<cr>g@
-vnoremap <leader>k :<c-u>call AckOperator(visualmode())<cr>
+nnoremap <leader>ak :set operatorfunc=AckOperator<cr>g@
+vnoremap <leader>ak :<c-u>call AckOperator(visualmode())<cr>
 
 function! AckOperator(type)
     let saved_unnamed_register = @@
