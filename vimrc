@@ -181,22 +181,8 @@ nnoremap <leader>ls :source ~/.vimsession<cr>
 " put the cursor on the column of a mark
 nnoremap ' `
 
-" quick Ack! with tex object
-nnoremap <leader>k :set operatorfunc=AckOperator<cr>g@
-vnoremap <leader>k :<c-u>call AckOperator(visualmode())<cr>
-
-function! AckOperator(type)
-    let saved_unnamed_register = @@
-    if a:type ==# 'v'
-        normal! `<v`>y
-    elseif a:type ==# 'char'
-        normal! `[v`]ly
-    else
-        return
-    endif
-    silent execute "Ack! " . shellescape(@@) . ' ' . expand('%:p:h')
-    let @@ = saved_unnamed_register
-endfunction
+" go to the alternate file
+nnoremap g3 :e#<cr>
 
 "}}}
 
@@ -230,6 +216,23 @@ endif
 " cst[      change <i></i> to []         [ok]
 " ds[       delete []                    ok
 " yss]      add []                       [ok]
+
+" quick Ack! with tex object
+nnoremap <leader>k :set operatorfunc=AckOperator<cr>g@
+vnoremap <leader>k :<c-u>call AckOperator(visualmode())<cr>
+
+function! AckOperator(type)
+    let saved_unnamed_register = @@
+    if a:type ==# 'v'
+        normal! `<v`>y
+    elseif a:type ==# 'char'
+        normal! `[v`]ly
+    else
+        return
+    endif
+    silent execute "Ack! " . shellescape(@@) . ' ' . expand('%:p:h')
+    let @@ = saved_unnamed_register
+endfunction
 
 " Syntastic Config
 set statusline+=%#warningmsg#
