@@ -178,7 +178,7 @@ nnoremap <leader><esc><esc> :q!<cr>
 
 " save/load session
 nnoremap <leader>ss :mksession! ~/.vimsession<cr>
-nnoremap <leader>ls :source ~/.vimsession<cr>
+nnoremap <leader>es :source ~/.vimsession<cr>
 
 " put the cursor on the column of a mark
 nnoremap ' `
@@ -236,6 +236,13 @@ function! AckOperator(type)
     let @@ = saved_unnamed_register
 endfunction
 
+" easymotion config
+nmap s <plug>(easymotion-s2)
+let g:EasyMotion_smartcase = 1
+let g:EasyMotion_use_upper = 1
+map <leader>j <plug>(easymotion-j)
+map <leader>k <plug>(easymotion-k)
+
 " Syntastic Config
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -274,3 +281,4 @@ endfunction
 nnoremap <f5> :call CompileRun()<cr>
 
 " Compile tool functions end }}}
+
