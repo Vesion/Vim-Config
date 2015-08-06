@@ -41,6 +41,8 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'mileszs/ack.vim'
 " true Sublime Text style multiple selections for Vim 
 Plugin 'terryma/vim-multiple-cursors'
+" a simple way to use motions
+Plugin 'easymotion/vim-easymotion'
 
 " define own text object
 Plugin 'kana/vim-textobj-user'
