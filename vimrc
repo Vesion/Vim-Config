@@ -201,21 +201,10 @@ nnoremap <c-p> :RainbowParenthesesToggleAll<cr>
 
 " airline Config
 let g:airline_powerline_fonts = 1
-" codes below is for macvim airline
+" for macvim airline
 if has("gui_running")
     set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
 endif
-
-" nerdcommenter mappings 
-" <leader>cc comment on
-" <leader>cu uncomment
-
-" vim-surround mappings, take [ok] for instance
-" cs['      change [] to ''              'ok'
-" cs'<i>    change '' to <i></i>         <i>ok</i>
-" cst[      change <i></i> to []         [ok]
-" ds[       delete []                    ok
-" yss]      add []                       [ok]
 
 " quick Ack! with tex object
 nnoremap <leader>ak :set operatorfunc=AckOperator<cr>g@
