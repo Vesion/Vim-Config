@@ -226,7 +226,7 @@ function! AckOperator(type)
     if a:type ==# 'v'
         normal! `<v`>y
     elseif a:type ==# 'char'
-        normal! `[v`]ly
+        normal! `[v`]y
     else
         return
     endif
