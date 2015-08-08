@@ -180,9 +180,6 @@ nnoremap <leader><esc><esc> :q!<cr>
 nnoremap <leader>ss :mksession! ~/.vimsession<cr>
 nnoremap <leader>es :source ~/.vimsession<cr>
 
-" go to the alternate file
-nnoremap g3 :e#<cr>
-
 "}}}
 
 " Non-plugin stuff end }}}
@@ -226,7 +223,6 @@ let g:EasyMotion_use_upper = 1
 
 " undotree config
 nnoremap <leader>u :UndotreeToggle<cr>
-let g:undotree_DiffAutoOpen = 0
 
 " Syntastic config
 set statusline+=%#warningmsg#
