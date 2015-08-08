@@ -166,7 +166,11 @@ vnoremap <c-j> :m '>+1<cr>gv=gv
 vnoremap <c-k> :m '<-2<cr>gv=gv
 
 " switch between windows
-nnoremap <tab><tab> <c-w>W:cd %:p:h<cr>:<cr>
+nnoremap <tab><tab> <c-w><c-w>
+nnoremap <tab>h <c-w><c-h>
+nnoremap <tab>j <c-w><c-j>
+nnoremap <tab>k <c-w><c-k>
+nnoremap <tab>l <c-w><c-l>
 
 " close window
 nnoremap <esc><esc> :q<cr>
