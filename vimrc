@@ -24,9 +24,6 @@ Plugin 'majutsushi/tagbar'
 " enhance the parentheses matching with colors
 Plugin 'kien/rainbow_parentheses.vim'
 
-" vim script library, provide commands and functions
-Plugin 'L9'
-
 " a git wrapper
 Plugin 'tpope/vim-fugitive'
 " comment utility
