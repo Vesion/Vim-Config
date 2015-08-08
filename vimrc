@@ -40,6 +40,10 @@ Plugin 'mileszs/ack.vim'
 Plugin 'terryma/vim-multiple-cursors'
 " a simple way to use motions
 Plugin 'easymotion/vim-easymotion'
+" check undo history visually
+Plugin 'mbbill/undotree'
+" a powerful file finder
+Plugin 'kien/ctrlp.vim'
 
 " define own text object
 Plugin 'kana/vim-textobj-user'
@@ -145,11 +149,11 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 inoremap jk <esc>
 inoremap <esc> <nop>
 
-" forbid direction keys
-nnoremap <up> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-nnoremap <down> <nop>
+" forbid direction keys in normal, visual, insert modes
+noremap <up> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
+noremap <down> <nop>
 inoremap <up> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
@@ -187,16 +191,16 @@ nnoremap g3 :e#<cr>
 
 " Plugin stuff start ---------- {{{
 
-" NERDTree Config
+" NERDTree config
 nnoremap <f1> :execute ":NERDTreeToggle " . expand('%:p:h')<cr>
 
-" TagBar Config
+" TagBar config
 nnoremap <f8> :TagbarToggle<cr>
 
-" rainbow_parentheses Config
+" rainbow_parentheses config
 nnoremap <c-p> :RainbowParenthesesToggleAll<cr>
 
-" airline Config
+" airline config
 let g:airline_powerline_fonts = 1
 " for macvim airline
 if has("gui_running")
@@ -227,7 +231,11 @@ let g:EasyMotion_use_upper = 1
 map <leader>j <plug>(easymotion-j)
 map <leader>k <plug>(easymotion-k)
 
-" Syntastic Config
+" undotree config
+nnoremap <leader>u :UndotreeToggle<cr>
+let g:undotree_DiffAutoOpen = 0
+
+" Syntastic config
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -238,7 +246,7 @@ let g:syntastic_check_on_wq              = 0
 let g:syntastic_cpp_compiler             = 'clang++'
 let g:syntastic_cpp_compiler_options     = ' -std=c++11 -stdlib=libc++'
 
-" YCM Config                    
+" YCM config                    
 let g:ycm_confirm_extra_conf = 0
 nnoremap <leader>gd :YcmCompleter GoToDefinition<cr>
 nnoremap <leader>gc :YcmCompleter GoToDeclaration<cr>
