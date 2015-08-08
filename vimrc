@@ -21,8 +21,6 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdtree'
 " ctag based utility
 Plugin 'majutsushi/tagbar'
-" enhance the parentheses matching with colors
-Plugin 'kien/rainbow_parentheses.vim'
 
 " a git wrapper
 Plugin 'tpope/vim-fugitive'
@@ -172,15 +170,11 @@ nnoremap <tab><tab> <c-w>W:cd %:p:h<cr>:<cr>
 
 " close window
 nnoremap <esc><esc> :q<cr>
-nnoremap <c-esc> :wq<cr>
 nnoremap <leader><esc><esc> :q!<cr>
 
 " save/load session
 nnoremap <leader>ss :mksession! ~/.vimsession<cr>
 nnoremap <leader>es :source ~/.vimsession<cr>
-
-" put the cursor on the column of a mark
-nnoremap ' `
 
 " go to the alternate file
 nnoremap g3 :e#<cr>
@@ -196,9 +190,6 @@ nnoremap <f1> :execute ":NERDTreeToggle " . expand('%:p:h')<cr>
 
 " TagBar config
 nnoremap <f8> :TagbarToggle<cr>
-
-" rainbow_parentheses config
-nnoremap <c-p> :RainbowParenthesesToggleAll<cr>
 
 " airline config
 let g:airline_powerline_fonts = 1
@@ -228,8 +219,6 @@ endfunction
 nmap s <plug>(easymotion-s2)
 let g:EasyMotion_smartcase = 1
 let g:EasyMotion_use_upper = 1
-map <leader>j <plug>(easymotion-j)
-map <leader>k <plug>(easymotion-k)
 
 " undotree config
 nnoremap <leader>u :UndotreeToggle<cr>
