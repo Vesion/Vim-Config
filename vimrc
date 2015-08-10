@@ -152,10 +152,6 @@ noremap <up> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
 noremap <down> <nop>
-inoremap <up> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-inoremap <down> <nop>
 
 " move lines up and down
 nnoremap <c-j> :m .+1<cr>==
