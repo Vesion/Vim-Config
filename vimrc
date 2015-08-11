@@ -91,8 +91,6 @@ set guioptions-=L
 
 syntax on
 
-let mapleader=","
-
 set encoding=utf-8
 
 set number
@@ -135,9 +133,16 @@ set smartcase
 set incsearch
 set nohlsearch
 
+" for saving folds
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
+
 " }}}
 
 " Vim maps ---------- {{{
+
+" define the <leader> key
+let mapleader=","
 
 " edit and save vimrc handily
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
@@ -147,7 +152,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 inoremap jk <esc>
 inoremap <esc> <nop>
 
-" forbid direction keys in normal, visual, insert modes
+" forbid direction keys in normal, visual
 noremap <up> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
