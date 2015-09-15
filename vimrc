@@ -250,10 +250,10 @@ function! CompileRun()
     let c_ft = &filetype
     if c_ft ==? 'c'
         execute '!gcc -std=c99 % -o %<'
-        execute '! %<'
+        execute '! ./%<'
     elseif c_ft ==? 'cpp'
         execute '!g++ -std=c++11 % -o %<'
-        execute '! %<'
+        execute '! ./%<'
     elseif c_ft ==? 'python'
         execute '!python %'
     elseif c_ft ==? 'scheme'
