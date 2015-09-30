@@ -42,6 +42,8 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'mbbill/undotree'
 " a powerful file finder
 Plugin 'kien/ctrlp.vim'
+" provides support for expanding abbreviations in html/css
+Plugin 'mattn/emmet-vim'
 
 " define own text object
 Plugin 'kana/vim-textobj-user'
@@ -224,6 +226,10 @@ let g:EasyMotion_use_upper = 1
 
 " undotree config
 nnoremap <leader>u :UndotreeToggle<cr>
+
+" Enable just for html/css
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 
 " Syntastic config
 set statusline+=%#warningmsg#
