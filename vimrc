@@ -154,12 +154,6 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 inoremap jk <esc>
 inoremap <esc> <nop>
 
-" forbid direction keys in normal, visual
-noremap <up> <nop>
-noremap <left> <nop>
-noremap <right> <nop>
-noremap <down> <nop>
-
 " move lines up and down
 nnoremap <c-j> :m .+1<cr>==
 nnoremap <c-k> :m .-2<cr>==
