@@ -237,6 +237,7 @@ let g:syntastic_cpp_compiler             = 'clang++'
 let g:syntastic_cpp_compiler_options     = ' -std=c++11 -stdlib=libc++'
 
 " YCM config                    
+let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_confirm_extra_conf = 0
 nnoremap <leader>gd :YcmCompleter GoToDefinition<cr>
 nnoremap <leader>gc :YcmCompleter GoToDeclaration<cr>
