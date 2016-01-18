@@ -38,8 +38,6 @@ Plugin 'mileszs/ack.vim'
 Plugin 'terryma/vim-multiple-cursors'
 " a simple way to use motions
 Plugin 'easymotion/vim-easymotion'
-" check undo history visually
-Plugin 'mbbill/undotree'
 " a powerful file finder
 Plugin 'kien/ctrlp.vim'
 " provides support for expanding abbreviations in html/css
@@ -152,7 +150,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " get back to normal mode swiftly
 inoremap jk <esc>
-inoremap <esc> <nop>
+" inoremap <esc> <nop>
 
 " move lines up and down
 nnoremap <c-j> :m .+1<cr>==
