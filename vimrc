@@ -93,6 +93,10 @@ syntax on
 
 set encoding=utf-8
 
+set autoread
+
+set lazyredraw
+
 set number
 set cursorline
 set cursorcolumn
@@ -152,7 +156,15 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 inoremap jk <esc>
 " inoremap <esc> <nop>
 
-" move lines up and down
+" Treat long lines as break lines (useful when moving around in them)
+noremap j gj
+noremap k gk
+
+" ^ and $ 
+noremap - ^
+noremap + $
+
+" use ALT+jk to move lines up and down
 nnoremap <c-j> :m .+1<cr>==
 nnoremap <c-k> :m .-2<cr>==
 inoremap <c-j> <esc>:m .+1<cr>==gi
