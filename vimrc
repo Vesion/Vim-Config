@@ -240,9 +240,9 @@ let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
 " ultisnips trigger configuration.
-let g:UltiSnipsExpandTrigger="<c-s>"
+let g:UltiSnipsExpandTrigger="<c-f>"
 let g:UltiSnipsJumpForwardTrigger="<c-g>"
-let g:UltiSnipsJumpBackwardTrigger="<c-f>"
+let g:UltiSnipsJumpBackwardTrigger="<c-d>"
 
 " Syntastic config
 set statusline+=%#warningmsg#
