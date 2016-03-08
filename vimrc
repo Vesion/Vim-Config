@@ -42,6 +42,10 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
 " provides support for expanding abbreviations in html/css
 Plugin 'mattn/emmet-vim'
+" a snippet engine, ultimate
+Plugin 'SirVer/ultisnips'
+" snippets
+Plugin 'honza/vim-snippets'
 
 " define own text object
 Plugin 'kana/vim-textobj-user'
@@ -234,6 +238,11 @@ nnoremap <leader>u :UndotreeToggle<cr>
 " Enable just for html/css
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
+
+" ultisnips trigger configuration.
+let g:UltiSnipsExpandTrigger="<c-s>"
+let g:UltiSnipsJumpForwardTrigger="<c-g>"
+let g:UltiSnipsJumpBackwardTrigger="<c-f>"
 
 " Syntastic config
 set statusline+=%#warningmsg#
