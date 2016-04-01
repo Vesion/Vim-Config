@@ -13,6 +13,8 @@ Plugin 'gmarik/Vundle.vim'
 
 " color theme
 Plugin 'tomasr/molokai'
+" an enhanced cpp highlight
+Plugin 'octol/vim-cpp-enhanced-highlight'
 " enhance statusline
 Plugin 'bling/vim-airline'
 " show a small vertical line when tap indent
@@ -85,6 +87,13 @@ augroup filetype_vim
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
+" for saving folds
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
+
+" auto update vimrc immediately
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
+
 " }}}
 
 " Vim common config ---------- {{{
@@ -140,13 +149,6 @@ set ignorecase
 set smartcase
 set incsearch
 set nohlsearch
-
-" for saving folds
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview
-
-" auto update vimrc immediately
-autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 " }}}
 
