@@ -23,6 +23,8 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdtree'
 " ctag based utility
 Plugin 'majutsushi/tagbar'
+" add a sign to bookmark
+Plugin 'kshenoy/vim-signature'
 
 " a git wrapper
 Plugin 'tpope/vim-fugitive'
