@@ -145,12 +145,15 @@ set nohlsearch
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
 
+" auto update vimrc immediately
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
+
 " }}}
 
 " Vim maps ---------- {{{
 
 " define the <leader> key
-let mapleader=","
+let mapleader=";"
 
 " edit and save vimrc handily
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
@@ -167,6 +170,13 @@ noremap k gk
 " ^ and $ 
 noremap - ^
 noremap + $
+
+" yank and paste with + register
+vnoremap <leader>y "+y
+nnoremap <leader>p "+p
+
+" jump between pairs
+nnoremap <leader>m %
 
 " use ALT+jk to move lines up and down
 nnoremap <c-j> :m .+1<cr>==
@@ -231,9 +241,6 @@ endfunction
 nmap s <plug>(easymotion-s2)
 let g:EasyMotion_smartcase = 1
 let g:EasyMotion_use_upper = 1
-
-" undotree config
-nnoremap <leader>u :UndotreeToggle<cr>
 
 " Enable just for html/css
 let g:user_emmet_install_global = 0
