@@ -58,8 +58,7 @@ Plugin 'bps/vim-textobj-python'
 Plugin 'sgur/vim-textobj-parameter'
 Plugin 'kana/vim-textobj-line'
 Plugin 'kana/vim-textobj-entire'
-Plugin 'Vesion/vim-textobj-restline'
-Plugin 'Vesion/vim-textobj-surrounding'
+Plugin 'gcmt/wildfire.vim'
 
 "a tool for drawing ascii art text
 Plugin 'Figlet.vim'
@@ -250,6 +249,10 @@ let g:EasyMotion_use_upper = 1
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
+" wildfire config 
+map <space> <plug>(wildfire-fuel)
+vmap <s-space> <plug>(wildfire-water)
+
 " ultisnips trigger configuration.
 let g:UltiSnipsExpandTrigger="<c-f>"
 let g:UltiSnipsJumpForwardTrigger="<c-g>"
@@ -263,7 +266,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list            = 1
 let g:syntastic_check_on_open            = 0
 let g:syntastic_check_on_wq              = 0
-let g:syntastic_enable_signs             = 0
+let g:syntastic_enable_signs             = 1
 let g:syntastic_cpp_compiler             = 'clang++'
 let g:syntastic_cpp_compiler_options     = ' -std=c++11 -stdlib=libc++'
 let g:syntastic_mode_map = {'mode': 'passive', 'active_filetypes': [],'passive_filetypes': []}
