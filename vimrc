@@ -26,8 +26,6 @@ Plugin 'majutsushi/tagbar'
 " add a sign to bookmark
 Plugin 'kshenoy/vim-signature'
 
-" a git wrapper
-Plugin 'tpope/vim-fugitive'
 " comment utility
 Plugin 'scrooloose/nerdcommenter'
 " easily add, delete and change surroundings like () [] or tags
@@ -36,16 +34,12 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 " automatic closing of surroundings
 Plugin 'Raimondi/delimitMate'
-" a replacement for grep
-Plugin 'mileszs/ack.vim'
 " true Sublime Text style multiple selections for Vim 
 Plugin 'terryma/vim-multiple-cursors'
 " a simple way to use motions
 Plugin 'easymotion/vim-easymotion'
 " a powerful file finder
 Plugin 'kien/ctrlp.vim'
-" provides support for expanding abbreviations in html/css
-Plugin 'mattn/emmet-vim'
 " a snippet engine, ultimate
 Plugin 'SirVer/ultisnips'
 " snippets
@@ -91,9 +85,6 @@ augroup END
 " for saving folds
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
-
-" auto update vimrc immediately
-autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 " }}}
 
@@ -162,9 +153,8 @@ let mapleader=";"
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-" get back to normal mode swiftly
+" let's fly
 inoremap jk <esc>
-" inoremap <esc> <nop>
 
 " Treat long lines as break lines (useful when moving around in them)
 noremap j gj
@@ -223,50 +213,29 @@ if has("gui_running")
     set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
 endif
 
-" quick Ack! with tex object
-nnoremap <leader>ak :set operatorfunc=AckOperator<cr>g@
-vnoremap <leader>ak :<c-u>call AckOperator(visualmode())<cr>
-
-function! AckOperator(type)
-    let saved_unnamed_register = @@
-    if a:type ==# 'v'
-        normal! `<v`>y
-    elseif a:type ==# 'char'
-        normal! `[v`]y
-    else
-        return
-    endif
-    silent execute "Ack! " . shellescape(@@) . ' ' . expand('%:p:h')
-    let @@ = saved_unnamed_register
-endfunction
-
 " easymotion config
 nmap s <plug>(easymotion-s2)
 let g:EasyMotion_smartcase = 1
 let g:EasyMotion_use_upper = 1
-
-" Enable just for html/css
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
 
 " wildfire config 
 map <space> <plug>(wildfire-fuel)
 vmap <s-space> <plug>(wildfire-water)
 
 " ultisnips trigger configuration.
-let g:UltiSnipsExpandTrigger="<c-f>"
-let g:UltiSnipsJumpForwardTrigger="<c-g>"
+let g:UltiSnipsExpandTrigger="<leader>f"
+let g:UltiSnipsJumpForwardTrigger="<leader>f"
 let g:UltiSnipsJumpBackwardTrigger="<c-d>"
 
 " Syntastic config
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list            = 1
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list            = 0
 let g:syntastic_check_on_open            = 0
 let g:syntastic_check_on_wq              = 0
-let g:syntastic_enable_signs             = 1
+let g:syntastic_enable_signs             = 0
 let g:syntastic_cpp_compiler             = 'clang++'
 let g:syntastic_cpp_compiler_options     = ' -std=c++11 -stdlib=libc++'
 let g:syntastic_mode_map = {'mode': 'passive', 'active_filetypes': [],'passive_filetypes': []}
