@@ -43,7 +43,7 @@ Plugin 'kien/ctrlp.vim'
 " a snippet engine, ultimate
 Plugin 'SirVer/ultisnips'
 " snippets
-Plugin 'honza/vim-snippets'
+Plugin 'Vesion/vim-snippets'
 
 " define own text object
 Plugin 'kana/vim-textobj-user'
