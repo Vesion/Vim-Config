@@ -70,7 +70,7 @@ flags = [
 , '-I'
 , './ClangCompleter'
 , '-isystem'
-, '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.2/include'
+, '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include'
 , '-isystem'
 , '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include'
 , '-isystem'
