@@ -149,6 +149,9 @@ set nohlsearch
 " define the <leader> key
 let mapleader=";"
 
+" forward delete
+inoremap <c-d> <esc>lxa
+
 " edit and save vimrc handily
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
@@ -235,10 +238,10 @@ let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list            = 0
 let g:syntastic_check_on_open            = 0
 let g:syntastic_check_on_wq              = 0
-let g:syntastic_enable_signs             = 0
+"let g:syntastic_enable_signs             = 0
 let g:syntastic_cpp_compiler             = 'clang++'
 let g:syntastic_cpp_compiler_options     = ' -std=c++11 -stdlib=libc++'
-let g:syntastic_mode_map = {'mode': 'passive', 'active_filetypes': [],'passive_filetypes': []}
+"let g:syntastic_mode_map = {'mode': 'passive', 'active_filetypes': [],'passive_filetypes': []}
 
 " YCM config                    
 let g:ycm_autoclose_preview_window_after_insertion = 1
