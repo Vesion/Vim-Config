@@ -142,15 +142,14 @@ set smartcase
 set incsearch
 set nohlsearch
 
+set pastetoggle=<F2>
+
 " }}}
 
 " Vim maps ---------- {{{
 
 " define the <leader> key
 let mapleader=";"
-
-" forward delete
-inoremap <c-d> <esc>lxa
 
 " edit and save vimrc handily
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
@@ -162,6 +161,9 @@ inoremap jk <esc>
 " Treat long lines as break lines (useful when moving around in them)
 noremap j gj
 noremap k gk
+
+" forward delete
+inoremap <c-d> <esc>lxi
 
 " ^ and $ 
 noremap - ^
@@ -265,7 +267,7 @@ function! CompileRun()
     elseif c_ft ==? 'python'
         execute '!python %'
     elseif c_ft ==? 'scheme'
-        execute '!gosh %'
+        execute '!racket %'
     endif
 endfunction
 nnoremap <f5> :call CompileRun()<cr>
