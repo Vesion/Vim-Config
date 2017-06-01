@@ -11,10 +11,9 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
+" -- appearance
 " color theme
 Plugin 'tomasr/molokai'
-" an enhanced cpp highlight
-Plugin 'octol/vim-cpp-enhanced-highlight'
 " enhance statusline
 Plugin 'bling/vim-airline'
 " show a small vertical line when tap indent
@@ -26,7 +25,8 @@ Plugin 'majutsushi/tagbar'
 " add a sign to bookmark
 Plugin 'kshenoy/vim-signature'
 
-" comment utility
+" -- utility
+" comment
 Plugin 'scrooloose/nerdcommenter'
 " easily add, delete and change surroundings like () [] or tags
 Plugin 'tpope/vim-surround'
@@ -45,7 +45,11 @@ Plugin 'SirVer/ultisnips'
 " snippets
 Plugin 'Vesion/vim-snippets'
 
-" define own text object
+" -- file type
+" an enhanced cpp highlight
+Plugin 'octol/vim-cpp-enhanced-highlight'
+
+" -- text object
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-function'
 Plugin 'bps/vim-textobj-python'
@@ -54,9 +58,7 @@ Plugin 'kana/vim-textobj-line'
 Plugin 'kana/vim-textobj-entire'
 Plugin 'gcmt/wildfire.vim'
 
-"a tool for drawing ascii art text
-Plugin 'Figlet.vim'
-
+" -- monster
 " syntastic check
 Plugin 'scrooloose/syntastic'
 " great but complicated utility for auto-completion
@@ -64,8 +66,6 @@ Plugin 'Valloric/YouCompleteMe'
 
 " local test plugins
 "Plugin 'file:///Users/Xiang/Workspace/Vim/xx'
-"Plugin 'file:///Users/Xiang/Workspace/Vim/vim-textobj-restline'
-"Plugin 'file:///Users/Xiang/Workspace/Vim/vim-textobj-surrounding'
 
 
 call vundle#end()
