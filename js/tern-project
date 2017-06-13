@@ -1,0 +1,12 @@
+{
+    "libs": [
+        "react",
+        "redux",
+        "browser",
+        "underscore",
+        "jquery"
+            ],
+        "plugins": {
+          "node": {}
+        }
+}
