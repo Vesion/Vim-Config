@@ -20,10 +20,12 @@ Plugin 'bling/vim-airline'
 Plugin 'Yggdroot/indentLine'
 " directory and file tree
 Plugin 'scrooloose/nerdtree'
-" ctag based utility
-Plugin 'majutsushi/tagbar'
-" add a sign to bookmark
-Plugin 'kshenoy/vim-signature'
+" nerdtree git plug
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+" git wrapper
+Plugin 'tpope/vim-fugitive'
+" git diff in gutter
+Plugin 'airblade/vim-gitgutter'
 
 " -- utility
 " comment
@@ -44,6 +46,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'SirVer/ultisnips'
 " snippets
 Plugin 'Vesion/vim-snippets'
+" ack
+Plugin 'mileszs/ack.vim'
 
 " -- file type
 " Plugin 'pangloss/vim-javascript'
@@ -62,10 +66,6 @@ Plugin 'gcmt/wildfire.vim'
 Plugin 'scrooloose/syntastic'
 " great but complicated utility for auto-completion
 Plugin 'Valloric/YouCompleteMe'
-
-" local test plugins
-"Plugin 'file:///Users/Xiang/Workspace/Vim/xx'
-
 
 call vundle#end()
 filetype plugin indent on
@@ -88,6 +88,8 @@ autocmd BufWinEnter *.* silent loadview
 " }}}
 
 " Vim common config ---------- {{{
+
+set shell=/bin/bash
 
 colorscheme molokai 
 set guioptions-=r
@@ -140,7 +142,7 @@ set matchtime=5
 set ignorecase
 set smartcase
 set incsearch
-set nohlsearch
+set hlsearch
 
 set pastetoggle=<F2>
 set conceallevel=0
@@ -163,9 +165,6 @@ inoremap jk <esc>
 noremap j gj
 noremap k gk
 
-" forward delete
-inoremap <c-d> <esc>lxi
-
 " ^ and $ 
 noremap - ^
 noremap + $
@@ -174,7 +173,10 @@ noremap + $
 vnoremap <leader>y "+y
 nnoremap <leader>p "+p
 
-" use ALT+jk to move lines up and down
+" erase hightlight of search patterns
+nnoremap <CR> :nohlsearch<CR><CR>
+
+" use ctrl+jk to move lines up and down
 nnoremap <c-j> :m .+1<cr>==
 nnoremap <c-k> :m .-2<cr>==
 inoremap <c-j> <esc>:m .+1<cr>==gi
@@ -206,8 +208,11 @@ nnoremap <leader>es :source ~/.vimsession<cr>
 " NERDTree config
 nnoremap <f1> :execute ":NERDTreeToggle " . expand('%:p:h')<cr>
 
-" TagBar config
-nnoremap <f8> :TagbarToggle<cr>
+" ack config
+nnoremap <leader>k :Ack<CR>
+
+" ctrlp config
+let g:ctrlp_cmd = 'CtrlPBuffer'
 
 " airline config
 "let g:airline_powerline_fonts = 1
