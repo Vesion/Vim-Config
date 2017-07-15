@@ -22,10 +22,10 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdtree'
 " nerdtree git plug
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-" git wrapper
-Plugin 'tpope/vim-fugitive'
 " git diff in gutter
 Plugin 'airblade/vim-gitgutter'
+" ctag based utility
+Plugin 'majutsushi/tagbar'
 
 " -- utility
 " comment
@@ -50,7 +50,8 @@ Plugin 'Vesion/vim-snippets'
 Plugin 'mileszs/ack.vim'
 
 " -- file type
-" Plugin 'pangloss/vim-javascript'
+" an enhanced cpp highlight
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " -- text object
 Plugin 'kana/vim-textobj-user'
@@ -66,6 +67,7 @@ Plugin 'gcmt/wildfire.vim'
 Plugin 'scrooloose/syntastic'
 " great but complicated utility for auto-completion
 Plugin 'Valloric/YouCompleteMe'
+
 
 call vundle#end()
 filetype plugin indent on
@@ -94,7 +96,6 @@ set shell=/bin/bash
 colorscheme molokai 
 set guioptions-=r
 set guioptions-=L
-set guifont=Monaco:h13
 
 syntax on
 
@@ -145,7 +146,6 @@ set incsearch
 set hlsearch
 
 set pastetoggle=<F2>
-set conceallevel=0
 
 " }}}
 
@@ -204,6 +204,9 @@ nnoremap <leader>es :source ~/.vimsession<cr>
 " NERDTree config
 nnoremap <f1> :execute ":NERDTreeToggle " . expand('%:p:h')<cr>
 
+" TagBar config
+nnoremap <f8> :TagbarToggle<cr>
+
 " ack config
 nnoremap <leader>k :Ack<CR>
 
@@ -211,11 +214,11 @@ nnoremap <leader>k :Ack<CR>
 let g:ctrlp_cmd = 'CtrlPBuffer'
 
 " airline config
-"let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 " for macvim airline
-"if has("gui_running")
-    "set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
-"endif
+if has("gui_running")
+    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
+endif
 
 " easymotion config
 nmap s <plug>(easymotion-s2)
@@ -239,15 +242,16 @@ let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list            = 0
 let g:syntastic_check_on_open            = 0
 let g:syntastic_check_on_wq              = 0
-let g:syntastic_enable_signs             = 0
+"let g:syntastic_enable_signs             = 0
+let g:syntastic_cpp_compiler             = 'clang++'
+let g:syntastic_cpp_compiler_options     = ' -std=c++11 -stdlib=libc++'
 "let g:syntastic_mode_map = {'mode': 'passive', 'active_filetypes': [],'passive_filetypes': []}
 
 " YCM config                    
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_confirm_extra_conf = 0
 nnoremap <leader>gd :YcmCompleter GoToDefinition<cr>
-nnoremap <leader>gr :YcmCompleter GoToReferences<cr>
-nnoremap <leader>gt :YcmCompleter GetType<cr>
+nnoremap <leader>gc :YcmCompleter GoToDeclaration<cr>
 
 " Plugin stuff end }}}
 
